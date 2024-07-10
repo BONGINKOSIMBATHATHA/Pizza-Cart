@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect Pizza</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Perfect Pizza</h1>
+    <div class="cart">
+        <h2>Shopping Cart</h2>
+        <div id="cart-items">
+            <div class="cart-item">
+                <p>Small: <button class="decrement" data-size="small">-</button> <span class="count" data-size="small">0</span> <button class="increment" data-size="small">+</button> x R31.99</p>
+            </div>
+            <div class="cart-item">
+                <p>Medium: <button class="decrement" data-size="medium">-</button> <span class="count" data-size="medium">0</span> <button class="increment" data-size="medium">+</button> x R58.99</p>
+            </div>
+            <div class="cart-item">
+                <p>Large: <button class="decrement" data-size="large">-</button> <span class="count" data-size="large">0</span> <button class="increment" data-size="large">+</button> x R87.99</p>
+            </div>
+        </div>
+        <p>Total cost: <span id="total-cost">0.00</span></p>
+        <button id="checkout" style="display: none;">Check Out</button>
+        <div class="message"></div>
+        <div id="payment-section" style="display: none;">
+            <label for="payment-amount">Payment amount:</label>
+            <input type="text" id="payment-amount" name="payment-amount">
+            <button id="pay">Pay</button>
+        </div>
+    </div>
+
+    <div class="pizzas">
+        <div class="pizza large_pizza">
+            <img src="pizza.png" alt="Large Pizza" width="130">
+            <h2>Large Pizza</h2>
+            <p>R87.99</p>
+            <p>Large margherita pizza with 3 toppings max. 2 or less meat topping, 3 or less other toppings.</p>
+            <button class="order" data-size="large">Order</button>
+        </div>
+        <div class="pizza medium_pizza">
+            <img src="pizza.png" alt="Medium Pizza" width="130">
+            <h2>Medium Pizza</h2>
+            <p>R58.99</p>
+            <p>Medium margherita pizza with 3 toppings max. 2 or less meat topping, 3 or less other toppings.</p>
+            <button class="order" data-size="medium">Order</button>
+        </div>
+        <div class="pizza small_pizza">
+            <img src="pizza.png" alt="Small Pizza" width="130">
+            <h2>Small Pizza</h2>
+            <p>R31.99</p>
+            <p>Small pizza with 3 toppings. 1 meat topping, 3 or less other toppings.</p>
+            <button class="order" data-size="small">Order</button>
+        </div>
+    </div>
+
+    <div class="contact_us">
+        <p>Contact us at: (021)-541-1000 twitter /fb /insta @perfectpizza</p>
+        <p>Pizza Plaza<br>Dough Road<br>Base Town</p>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
